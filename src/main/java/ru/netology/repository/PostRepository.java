@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
 // Stub
@@ -15,7 +16,7 @@ public class PostRepository {
   final static int NEW_POST = 0;
   List<Post> repository;
   public PostRepository(){
-    this.repository = Collections.synchronizedList(new ArrayList<>());
+    this.repository = new CopyOnWriteArrayList<>();
   }
   public List<Post> all() {
     return repository;
