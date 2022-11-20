@@ -11,7 +11,6 @@ import java.util.Optional;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Repository
 public class PostRepository {
   static AtomicInteger counter = new AtomicInteger(1);
   final static int NEW_POST = 0;
